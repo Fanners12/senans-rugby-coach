@@ -1,4 +1,4 @@
-const CACHE = 'senans-coach-v1';
+const CACHE = 'senans-coach-v' + Date.now();
 const ASSETS = [
   './',
   './index.html',
@@ -24,7 +24,8 @@ self.addEventListener('activate', e => {
 });
 
 self.addEventListener('fetch', e => {
+  // Always fetch fresh from network, fall back to cache
   e.respondWith(
-    caches.match(e.request).then(r => r || fetch(e.request))
+    fetch(e.request).catch(() => caches.match(e.request))
   );
 });

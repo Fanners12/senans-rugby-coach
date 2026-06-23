@@ -4018,7 +4018,9 @@ renderAgeGroup('u8');
 // Register service worker for offline use
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('./sw.js').catch(() => {});
+    navigator.serviceWorker.register('./sw.js').then(reg => {
+      reg.update(); // Force check for new version every load
+    }).catch(() => {});
   });
 }
 </script>
