@@ -1,7 +1,7 @@
 {
-  "name": "St. Senans RFC — Coach Pro",
-  "short_name": "Senans Coach",
-  "description": "St. Senans RFC coaching toolkit — session planner, drills, tactics, and player tracker",
+  "name": "Rugby Coach Pro",
+  "short_name": "RugbyCoach",
+  "description": "The complete rugby coaching toolkit — session planner, drills, tactics, analysis and more",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#0a0a0a",
